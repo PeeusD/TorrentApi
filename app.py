@@ -1,4 +1,5 @@
 import requests
+import os
 from bs4 import BeautifulSoup  
 print('''        
 
@@ -30,7 +31,7 @@ try:
                 links = row.find('a').get('href') #magnet links
                 i=i+1
                 
-                print(f'⭐ {i} {movie_name} >> |Leeches:{leeches}| |Seeds:{seeds}| \n|Size:{file_size}| |Last Updated:{last_updt}| \n\n')
+                print(f'⭐ {i} {movie_name} -->> |Leeches:{leeches}| |Seeds:{seeds}| |Size:{file_size}| |Last Updated:{last_updt}| \n\n')
 
 except Exception as e:
     print('Result not found Error: ',e)         

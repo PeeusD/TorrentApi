@@ -1,5 +1,5 @@
 ## Torrent API - 
-### Now you can download torrent files from this API
+### Now you can download torrent files from this API. This is the torrent api created using Beautifulsoup using Django REST framework
 
 ### Libraries used:
 * Django-Framework

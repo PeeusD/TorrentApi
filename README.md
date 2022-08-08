@@ -24,3 +24,4 @@
 
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture1.PNG) <br>
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture2.PNG) <br>
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture3.PNG) <br>

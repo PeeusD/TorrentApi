@@ -26,5 +26,5 @@
 ### Sample - Browsable Api
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture2.PNG) <br>
 ### Response in JSON
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture3.PNG) <br>
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture3.png) <br>
 ### POST Request passing in JSON

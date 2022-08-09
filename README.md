@@ -13,27 +13,35 @@
 
 ### How to use this API
 * Create your registration into database:
-Method: POST
-Json Format:
-`{
-  "email":"rahul@gmail.com",
-  "name":"Rahul",
-  "password": "1234567",
-  "password2":"1234567"
-    }`
+  Method: POST
+  Example Json Format:
+  ```json {
+    "email":"rahul@gmail.com",
+    "name":"Rahul",
+    "password": "1234567",
+    "password2":"1234567"
+      }```
 * Login and get your access token: 
     Method POST
-    JSON format-
-`{
-  "email":"rahul@gmail.com",
-  "password": "1234567"
-    }`
+    Example JSON format-
+  ```json {
+    "email":"rahul@gmail.com",
+    "password": "1234567"
+      }```
 * Accessing Torrent Api: 
-    Method GET = `http://127.0.0.1:8000/torrent/`
-    Method POST = Pass the key value in JSON
-    `http://127.0.0.1:8000/torrent/ Authorization Bearer {your_accesstoken} `
-    `JSON BODY {"search" : "your_file_name"}`
-    
+    Method GET 
+    ```sh 
+      http://127.0.0.1:8000/torrent/ 
+    ```
+    Method POST Pass the key value in JSON
+    ```sh 
+      http://127.0.0.1:8000/torrent/ Authorization Bearer {your_accesstoken} 
+    ```
+    JSON BODY 
+    ```sh 
+    {"search" : "your_file_name"}
+    ```
+
 ## Samples:
 
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture1.PNG) <br>

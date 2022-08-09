@@ -1,4 +1,4 @@
-## Torrent API - 
+## Torrent API [Unofficial]
 ### Now you can download torrent files from this API. 
 
 
@@ -52,8 +52,6 @@
 
 ## Samples:
 
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture1.PNG) <br>
-### Sample - Browsable Api
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture2.PNG) <br>
 ### Response in JSON
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture3.png) <br>

@@ -16,6 +16,10 @@
   Method: **POST**
   Example **Json Format:**
 
+   ```sh 
+      http://127.0.0.1:8000/register/ 
+    ```
+
   ```json 
   {
     "email":"rahul@gmail.com",
@@ -28,6 +32,10 @@
 * **Login and get your access token:**
     Method **POST**
     Example **JSON format**
+
+     ```sh 
+      http://127.0.0.1:8000/login/ 
+    ```
 
   ```json 
   {

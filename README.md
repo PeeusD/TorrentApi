@@ -12,14 +12,14 @@
 
 
 ### How to use this API
-* **Create your registration into database:**
-  Method: **POST**
-  Example **Json Format:**
+* **Create your registration into database | Method:POST**
+
 
    ```sh 
       http://127.0.0.1:8000/register/ 
     ```
-
+  **Example:** pass key value **Json Format:**
+  
   ```json 
   {
     "email":"rahul@gmail.com",
@@ -29,13 +29,13 @@
   }
     ```
 
-* **Login and get your access token:**
-    Method **POST**
-    Example **JSON format**
+* **Login and get your access token | Method : POST**
+
 
      ```sh 
       http://127.0.0.1:8000/login/ 
     ```
+  **Example:** pass key value **Json Format:**
 
   ```json 
   {
@@ -44,16 +44,19 @@
   }
     ```
 
-* **Uses JWT(Json Webtoken) for authentication. Accessing Torrent Api:** 
-    Method **GET** 
+* **Uses JWT(Json Webtoken) for authentication. Accessing Torrent Api | Method GET** 
+
     ```sh 
       http://127.0.0.1:8000/torrent/ 
     ```
     Method **POST** 
+
     ```sh 
       http://127.0.0.1:8000/torrent/ Authorization Bearer {your_accesstoken} 
     ```
-    **JSON BODY** 
+    
+    **Example:** pass key value **Json Format:** 
+    
     ```sh 
     {"search" : "your_file_name"}
     ```

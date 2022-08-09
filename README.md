@@ -15,14 +15,14 @@
 * **Create your registration into database:**
   Method: **POST**
   Example **Json Format:**
-  
+
   ```json 
-    {
+  {
     "email":"rahul@gmail.com",
     "name":"Rahul",
     "password": "1234567",
     "password2":"1234567"
-      }
+  }
     ```
 
 * **Login and get your access token:**
@@ -30,10 +30,10 @@
     Example **JSON format**
 
   ```json 
-      {
+  {
     "email":"rahul@gmail.com",
     "password": "1234567"
-      }
+  }
     ```
 
 * **Uses JWT(Json Webtoken) for authentication. Accessing Torrent Api:** 

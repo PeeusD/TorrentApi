@@ -19,7 +19,7 @@ from rest_framework.urlpatterns import format_suffix_patterns
 from app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.torrent_api ),
+    path('', views.TorrentHandler.as_view() ),
 ]
 
 urlpatterns = format_suffix_patterns(urlpatterns)

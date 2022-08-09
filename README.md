@@ -1,11 +1,6 @@
 ## Torrent API - 
 ### Now you can download torrent files from this API. 
 
-### Libraries used:
-* Django-Framework
-* Django Rest Framework
-* Beautiful Soup
-* Requests
 
 ### Provides you details :
 * Title - Descriptions of file. 
@@ -14,11 +9,30 @@
 * File size - File size in MB/GB.
 * Last Updated - Total time elapsed after uploading the file. 
 * Magnet Links -  For downloading the file.
+* Uses JWT(Json Webtoken) for authentication
 
 ### How to use this API
-* Method GET = ""
-* Method POST = Pass the key value in JSON
-    `{"search" : "your_file_name"}`
+* Create your registration into database:
+Method: POST
+Json Format:
+`{
+  "email":"rahul@gmail.com",
+  "name":"Rahul",
+  "password": "1234567",
+  "password2":"1234567"
+    }`
+* Login and get your access token: 
+    Method POST
+    JSON format-
+`{
+  "email":"rahul@gmail.com",
+  "password": "1234567"
+    }`
+* Accessing Torrent Api: 
+    Method GET = `http://127.0.0.1:8000/torrent/`
+    Method POST = Pass the key value in JSON
+    `http://127.0.0.1:8000/torrent/ Authorization Bearer {your_accesstoken} `
+    `JSON BODY {"search" : "your_file_name"}`
     
 ## Samples:
 

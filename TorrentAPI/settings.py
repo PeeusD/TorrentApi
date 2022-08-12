@@ -79,13 +79,25 @@ WSGI_APPLICATION = 'TorrentAPI.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
+# SQL SETTINGS
+DATABASES = {  
+    'default': {  
+        'ENGINE': 'django.db.backends.mysql',  
+        'NAME': 'MyPractice$torrentdb',  
+        'USER': 'MyPractice',  
+        'PASSWORD': 'dontangryme978123',  
+        'HOST': 'MyPractice.mysql.pythonanywhere-services.com',  
+        'PORT': '3306',  
+       
+    }  
+}  
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators

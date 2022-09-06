@@ -5,3 +5,4 @@ djangorestframework-simplejwt
 mysqlclient
 requests
 beautifulsoup4
+psycopg2

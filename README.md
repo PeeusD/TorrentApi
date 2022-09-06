@@ -1,6 +1,7 @@
 ## Torrent API [Unofficial]
 ### Now you can download torrent files from this API. 
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/magnet.png) <br>
+
+<img src="https://github.com/PeeusD/TorrentApi/blob/main/gitpic/magnet.png" width="500" title="hover text">
 
 ### Currently the API can get the following details for a specific files in JSON format:
 * **Title** - Descriptions of file. 

@@ -5,11 +5,11 @@
 
 ### Currently the API can get the following details for a specific files in JSON format:
 * **Title** - Descriptions of file. 
-* **Leechers**- No. of current leechers who is uploading the file. 
-* **Seeders** - No. of current seeders who is downloading the file.
+* **Leechers**- No. of current leechers who are downloading the file. 
+* **Seeders** - No. of current seeders who are uploading the file.
 * **File size** - File size in MB/GB.
 * **Last Updated** - Total time elapsed after uploading the file. 
-* **Magnet Links** -  For downloading the file.
+* **Magnet Links** -  Torrent/Magnet links for downloading the file.
 
 
 ### How to use this API

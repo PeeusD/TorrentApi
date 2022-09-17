@@ -47,9 +47,7 @@
 
 * **Uses JWT(Json Webtoken) for authentication. Accessing Torrent Api | Method GET** 
 
-    ```sh 
-      http://127.0.0.1:8000/torrent/ 
-    ```
+  
     Method **POST** 
 
     ```sh 

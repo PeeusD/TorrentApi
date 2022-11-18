@@ -1,5 +1,5 @@
 from django.db import models
-import requests
+import requests,random
 from bs4 import BeautifulSoup  
 from django.db import models
 from django.contrib.auth.models import BaseUserManager, AbstractBaseUser
@@ -85,46 +85,47 @@ class Torrent:
         self.res = res
     
     def handling_request(self):
-        r = requests.get(f'https://torrentz2.pics/data.php?q={self.res}')
+        
+        headers = [{'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'},
+                        { 'User-Agent' :'Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:49.0) Gecko/20100101 Firefox/49.0'},
+                                            { 'User-Agent' :'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.121 Safari/537.36'},
+                                            { 'User-Agent' :'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.157 Safari/537.36'},
+                                            { 'User-Agent' :'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.87 Safari/537.36'},
+                                            { 'User-Agent' :'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36'}]
+        try:
+        
+            r = requests.get(f'https://torrentz2.nz/search?q={self.res}', headers=headers[random.randint(0,4)])
             # print(r.status_code)
-        try: 
-            res = {}
             soup = BeautifulSoup(r.text,'html.parser')
-            contents = soup.find('table', class_ = 'table')
-            for content in contents.find_all('tbody'):
-                rows = content.find_all('tr')
-                # print(rows[5])
-                i=0
-                for row in rows:
-                    udt = []
-                    res_lst={}
-                    title = row.find('span').text  #title
-                    leeches = row.find('td', attrs={ 'data-title':'Leeches'}).text # no. of leeches
-                    for seed in row.findAll('td', attrs={ 'data-title':'Last Updated'}):  #no. of seeders and last updt
-                        udt.append(seed)
-                    last_updt = (str(udt[0])).strip('<td class="age-data" data-title="Last Updated"></td>')  #last updated
-                    seeds = (str(udt[1])).strip('<td data-title="Last Updated"></td>') #seeds
-                    
-                    file_size = row.find('td', attrs={ 'data-title':'Size'}).text  #file size
-                    links = row.find('a').get('href') #magnet links
-                    i=i+1
-                    
-                    # print(f'⭐ {i} {title} -->> |Leeches:{leeches}| |Seeds:{seeds}| |Size:{file_size}| |Last Updated:{last_updt}| \n\n')
-                    
-                    res_lst.update({
+            contents = soup.find('div', class_ = 'results')
+            i=1
+            res = {}
+            for content in contents.find_all('dl'):
+                
+                title = content.find('a').text
+                torr_pg = content.find('a').get('href')
+                magnet = content.find_all('a')[1].get('href')
+                last_updt = content.find_all('span')[1].text
+                file_size = content.find_all('span')[2].text
+                seeders = content.find_all('span')[3].text
+                leechers = content.find_all('span')[4].text
+                # print(title , magnet, last_updt, file_size, seeders, leechers)
+            
+                res_dict = {
                         'title': title, 
-                        'leechers': leeches, 
-                        'seeders': seeds, 
+                        'leechers': leechers, 
+                        'seeders': seeders, 
                         'file_size':file_size, 
                         'last_updt':last_updt, 
-                        'magnets': links
-                    })  #appending multiple values into res_lst...
-                    res['⭐'+str(i)] = res_lst
-                return res
+                        'torPgLink': torr_pg,
+                        'magnet': magnet
+                    }  #appending multiple values into res_dict...
+                res['⭐ '+ str(i)] = res_dict
+                i+=1  
+            return res
         except Exception as e:
-            
+            # print(e)
             return f'Error: BAD REQUEST'
-            # return f'Error'+str(e)
 
         
                    

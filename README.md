@@ -45,17 +45,17 @@
   }
     ```
 
-* **Step-3 Copy your access token and paste into "Authorization" tab and pass Json format Eg. {"search" : "your_file_name"}**
+* **Step-3 Searching and gettig the torrent files details. Use Step-A or Step-B**
 
   
   Method **POST** 
-  Step A: If you are using PostMan or ThunderClient then copy - paste your access token into "Authorization" tab with json key-value format. Eg: {"search" : "your_file_name"}
+  *Step A: If you are using PostMan or ThunderClient then copy - paste your access token into "Authorization" tab with json key-value format. Eg: {"search" : "your_file_name"}*
 
     ```sh 
       http://127.0.0.1:8000/torrent/
     ```
 
-  Step B: If you are using DRF (Browsable Api) or HTTPIE client; then copy and paste your access token into "Authorization" tab with json key-value format. Eg: {"search" : "your_file_name"}
+  *Step B: If you are using DRF (Browsable Api) or HTTPIE client; then copy and paste your access token into "Authorization" tab with json key-value format. Eg: {"search" : "your_file_name"}*
     
     ```sh 
       http://127.0.0.1:8000/torrent/ Authorization Bearer {your_accesstoken} 

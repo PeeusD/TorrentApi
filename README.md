@@ -48,14 +48,19 @@
 * **Step-3 Copy your access token and paste into "Authorization" tab and pass Json format Eg. {"search" : "your_file_name"}**
 
   
-    Method **POST** 
+  Method **POST** 
+  Step A: If you are using PostMan or ThunderClient then copy - paste your access token into "Authorization" tab with json key-value format. Eg: {"search" : "your_file_name"}
 
+    ```sh 
+      http://127.0.0.1:8000/torrent/
+    ```
+
+  Step B: If you are using DRF (Browsable Api) or HTTPIE client; then copy and paste your access token into "Authorization" tab with json key-value format. Eg: {"search" : "your_file_name"}
+    
     ```sh 
       http://127.0.0.1:8000/torrent/ Authorization Bearer {your_accesstoken} 
     ```
-    
-    **Example:** passing key value **Json Format:** 
-    
+
     ```sh 
     {"search" : "your_file_name"}
     ```
@@ -63,13 +68,13 @@
 ## Samples:
 
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureRegister.JPG) <br>
-### REGISTER
+### _REGISTER_
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureLogin.JPG) <br>
-### LOGIN
+### _LOGIN_
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture3.png) <br>
-### POST Request passing in JSON
+### _POST Request passing in JSON_
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureSearch.JPG) <br>
 ### Searching files - Response in JSON into ThunderClient
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture1.PNG) <br>
-### Getting Response in JSON in DRF Browsable Api
+### _Getting Response in JSON in DRF Browsable Api_
 

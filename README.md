@@ -62,8 +62,14 @@
 
 ## Samples:
 
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureRegister.JPG) <br>
+### REGISTER
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureLogin.JPG) <br>
+### LOGIN
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture3.png) <br>
 ### POST Request passing in JSON
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture2.PNG) <br>
-### Response in JSON
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture2.JPG) <br>
+### Response in JSON into ThunderClient
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture1.JPG) <br>
+### Response in JSON in DRF Browsable Api
 

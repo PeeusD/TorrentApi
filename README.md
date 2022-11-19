@@ -68,8 +68,8 @@
 ### LOGIN
 ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture3.png) <br>
 ### POST Request passing in JSON
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture2.JPG) <br>
-### Response in JSON into ThunderClient
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture1.JPG) <br>
-### Response in JSON in DRF Browsable Api
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureSearch.JPG) <br>
+### Searching files - Response in JSON into ThunderClient
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture1.PNG) <br>
+### Getting Response in JSON in DRF Browsable Api
 

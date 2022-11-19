@@ -13,6 +13,7 @@
 
 
 ### How to use this API
+### _REGISTER_
 * **Step-1 Create your registration into database | Method:POST**
 
 
@@ -30,13 +31,17 @@
   }
     ```
 
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureRegister.JPG) <br>
+
+
+### _LOGIN_
 * **Step-2 Login and get your access token | Method : POST**
 
 
      ```sh 
       http://127.0.0.1:8000/login/ 
     ```
-  **Example:** pass key value **Json Format:**
+  **Pass key value Json Format:**
 
   ```json 
   {
@@ -45,7 +50,11 @@
   }
     ```
 
-* **Step-3 Searching and gettig the torrent files details. Use Step-A or Step-B**
+![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureLogin.JPG) <br>
+
+
+### Searching files - Response in JSON into ThunderClient
+* **Step-3 Searching and getting the torrent files details. Use Step-A (using PostMan/ThunderClient) or Step-B(Using DRF (Browsable Api) or HTTPIE client)**
 
   
   Method **POST** 
@@ -55,28 +64,35 @@
     ```sh 
       http://127.0.0.1:8000/torrent/
     ```
-    *OR*
+    **Pass key value Json Format:**
+    
+    ```json
+      {"search" : "your_file_name"}
+   ```
+   
+    ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureSearch.JPG) <br>
 
-  *Step B: If you are using DRF (Browsable Api) or HTTPIE client; then copy and paste your access token into "Authorization" tab with json key-value format. Eg:           {"search" : "your_file_name"}*
+**or**
+
+### Getting Response in JSON in DRF Browsable Api
+  *Step B: If you are using DRF (Browsable Api) or HTTPIE client; then copy and paste your access token as ApiKey into {your_accesstoken} with json key-value format. Eg:     {"search" : "your_file_name"}*
     
     ```sh 
-      http://127.0.0.1:8000/torrent/ Authorization Bearer {your_accesstoken} 
+      http://127.0.0.1:8000/torrent/Authorization Bearer {your_accesstoken} 
     ```
 
-    ```sh 
-    {"search" : "your_file_name"}
+   **Pass key value Json Format:**
+   
+    ```json
+      {"search" : "your_file_name"}
     ```
+    
+   ![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture1.PNG)
 
-## Samples:
 
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureRegister.JPG) <br>
-### _REGISTER_
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureLogin.JPG) <br>
-### _LOGIN_
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture3.png) <br>
-### _POST Request passing in JSON_
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/CaptureSearch.JPG) <br>
-### Searching files - Response in JSON into ThunderClient
-![alt text](https://github.com/PeeusD/TorrentApi/blob/main/gitpic/Capture1.PNG) <br>
-### _Getting Response in JSON in DRF Browsable Api_
+
+
+
+
+
 

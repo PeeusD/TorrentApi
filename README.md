@@ -49,13 +49,15 @@
 
   
   Method **POST** 
+  
   *Step A: If you are using PostMan or ThunderClient then copy - paste your access token into "Authorization" tab with json key-value format. Eg: {"search" : "your_file_name"}*
 
     ```sh 
       http://127.0.0.1:8000/torrent/
     ```
+    *OR*
 
-  *Step B: If you are using DRF (Browsable Api) or HTTPIE client; then copy and paste your access token into "Authorization" tab with json key-value format. Eg: {"search" : "your_file_name"}*
+  *Step B: If you are using DRF (Browsable Api) or HTTPIE client; then copy and paste your access token into "Authorization" tab with json key-value format. Eg:           {"search" : "your_file_name"}*
     
     ```sh 
       http://127.0.0.1:8000/torrent/ Authorization Bearer {your_accesstoken} 

@@ -13,7 +13,7 @@
 
 
 ### How to use this API
-* **Create your registration into database | Method:POST**
+* **Step-1 Create your registration into database | Method:POST**
 
 
    ```sh 
@@ -30,7 +30,7 @@
   }
     ```
 
-* **Login and get your access token | Method : POST**
+* **Step-2 Login and get your access token | Method : POST**
 
 
      ```sh 
@@ -45,7 +45,7 @@
   }
     ```
 
-* **Uses JWT(Json Webtoken) for authentication. Accessing Torrent Api | Method GET** 
+* **Step-3 Copy your access token and paste into "Authorization" tab and pass Json format Eg. {"search" : "your_file_name"}**
 
   
     Method **POST** 
@@ -54,7 +54,7 @@
       http://127.0.0.1:8000/torrent/ Authorization Bearer {your_accesstoken} 
     ```
     
-    **Example:** pass key value **Json Format:** 
+    **Example:** passing key value **Json Format:** 
     
     ```sh 
     {"search" : "your_file_name"}
